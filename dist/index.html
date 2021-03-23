@@ -17,30 +17,36 @@
       <h5 class="card-title">Benutzer anlegen</h5>
       <form>
         <div class="form-group row">
-          <label for="vorname" class="col-sm-2 col-form-label">Vorname</label>
+          <label for="username" class="col-sm-2 col-form-label">Benutzername</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="vorname" placeholder="Vorname">
+            <input type="text" class="form-control" id="username" placeholder="Benutzername" autocomplete="off">
           </div>
         </div>
         <div class="form-group row">
-          <label for="nachname" class="col-sm-2 col-form-label">Nachname</label>
+          <label for="firstname" class="col-sm-2 col-form-label">Vorname</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="nachname" placeholder="Nachname">
+            <input type="text" class="form-control" id="firstname" placeholder="Vorname">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="lastname" class="col-sm-2 col-form-label">Nachname</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="lastname" placeholder="Nachname">
           </div>
         </div>
         <button type="button" id="save" class="btn btn-primary" aria-describedby="anlegenHelp">Anlegen</button>
-        <small id="anlegenHelp" class="form-text text-muted">POST http://localhost:8080/benutzers</small>
+        <small id="anlegenHelp" class="form-text text-muted">POST http://localhost:8080/users</small>
       </form>
     </div>
   </div>
   <div class="card mt-4">
     <div class="card-body">
       <h5 class="card-title" aria-describedby="benuterlisteHelp">Benutzerliste</h5>
-      <small id="benuterlisteHelp" class="form-text text-muted mb-4">GET http://localhost:8080/benutzers</small>
+      <small id="benuterlisteHelp" class="form-text text-muted mb-4">GET http://localhost:8080/users</small>
       <table class="table" id="benutzerliste">
         <thead>
           <tr>
-            <th>Benutzer-ID</th>
+            <th>Benutzername</th>
             <th>Vorname</th>
             <th>Nachname</th>
             <th>Aktionen</th>
