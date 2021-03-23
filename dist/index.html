@@ -12,9 +12,9 @@
 </head>
 
 <body class="container">
-  <div class="card">
+  <div class="card mt-4">
     <div class="card-body">
-      <h5 class="card-title">Benutzer editieren</h5>
+      <h5 class="card-title">Benutzer anlegen</h5>
       <form>
         <div class="form-group row">
           <label for="vorname" class="col-sm-2 col-form-label">Vorname</label>
@@ -28,17 +28,19 @@
             <input type="text" class="form-control" id="nachname" placeholder="Nachname">
           </div>
         </div>
-        <button type="button" id="save" class="btn btn-primary">Speichern</button>
+        <button type="button" id="save" class="btn btn-primary" aria-describedby="anlegenHelp">Anlegen</button>
+        <small id="anlegenHelp" class="form-text text-muted">POST http://localhost:8080/benutzers</small>
       </form>
     </div>
   </div>
-  <br />
-  <div class="card">
+  <div class="card mt-4">
     <div class="card-body">
-      <h5 class="card-title">Benutzer anzeigen</h5>
+      <h5 class="card-title" aria-describedby="benuterlisteHelp">Benutzerliste</h5>
+      <small id="benuterlisteHelp" class="form-text text-muted mb-4">GET http://localhost:8080/benutzers</small>
       <table class="table" id="benutzerliste">
         <thead>
           <tr>
+            <th>Benutzer-ID</th>
             <th>Vorname</th>
             <th>Nachname</th>
           </tr>
